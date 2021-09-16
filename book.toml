@@ -1,0 +1,13 @@
+[book]
+authors = ["josepmdc"]
+language = "en"
+multilingual = false
+src = "src"
+title = "notes"
+
+[output.html]
+no-section-label = true
+
+[output.html.search]
+enable = true
+limit-results = 30

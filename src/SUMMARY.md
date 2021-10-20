@@ -2,7 +2,7 @@
 
 ---
 
-# ADA
+# Design and Analysis of Algorithms (ADA)
 - [1 Pre-condicions, post-condicions i invariants]()
 - [2 Complexitat Computacional]()
 - [3 Greedy]()
@@ -15,7 +15,7 @@
 
 ---
 
-# ApC
+# Machine Learning (ApC)
 - [1 Regressió Linial i Descens del Gradient](./ApC/1.md)
 - [2 Regularitzador i regressió polinomial]()
 - [3 Classificació amb Regressió logística]()
@@ -26,15 +26,16 @@
 
 ---
 
-# CRI
+# Knowledge representation and reasoning (CRI)
 
 ---
 
-# SO
+# Operating Systems (SO)
 
 - [1 Introduction](./SO/1.md)
-- [2 Processes, Threads, Containers]()
+- [2 Processes, Threads, Containers](./SO/2.md)
+- [3 Concurrency](./SO/3.md)
 
 ---
 
-# VGI
+# Computer Graphics (VGI)

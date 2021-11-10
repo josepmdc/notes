@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html" class="active">Index</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Machine Learning (ApC)</li><li class="chapter-item expanded "><a href="ApC/1.html">1 Regressió Linial i Descens del Gradient</a></li><li class="chapter-item expanded "><div>2 Regularitzador i regressió polinomial</div></li><li class="chapter-item expanded "><div>3 Classificació amb Regressió logística</div></li><li class="chapter-item expanded "><div>4 Classificació amb SVMs</div></li><li class="chapter-item expanded "><div>5 Perceptró i Backpropagation</div></li><li class="chapter-item expanded "><div>6 Memorització de dades amb KNN</div></li><li class="chapter-item expanded "><div>7 Clustering de dades K-Means vs. EM</div></li><li class="chapter-item expanded affix "><li class="part-title">Operating Systems (SO)</li><li class="chapter-item expanded "><a href="SO/1.html">1 Introduction</a></li><li class="chapter-item expanded "><a href="SO/2.html">2 Processes, Threads, Containers</a></li><li class="chapter-item expanded "><a href="SO/3.html">3 Concurrency</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html" class="active">Index</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Machine Learning (ApC)</li><li class="chapter-item expanded "><a href="ApC/1.html">Regressió Linial i Descens del Gradient</a></li><li class="chapter-item expanded "><a href="ApC/2.html">Regularitzador, regressió polinomial i recomanadors</a></li><li class="chapter-item expanded "><a href="ApC/3.html">Regressió logística i multiclasse</a></li><li class="chapter-item expanded "><a href="ApC/4.html">Classificació amb SVMs</a></li><li class="chapter-item expanded "><a href="ApC/5.html">Xarxes Neuronals</a></li><li class="chapter-item expanded "><a href="ApC/6.html">Clustering</a></li><li class="chapter-item expanded affix "><li class="part-title">Operating Systems (SO)</li><li class="chapter-item expanded "><a href="SO/1.html">Introduction</a></li><li class="chapter-item expanded "><a href="SO/2.html">Processes, Threads, Containers</a></li><li class="chapter-item expanded "><a href="SO/3.html">Concurrency</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -156,20 +156,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

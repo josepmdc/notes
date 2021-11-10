@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>1 Regressió Linial i Descens del Gradient - notes</title>
+        <title>Regressió Linial i Descens del Gradient - notes</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Index</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Machine Learning (ApC)</li><li class="chapter-item expanded "><a href="../ApC/1.html" class="active">1 Regressió Linial i Descens del Gradient</a></li><li class="chapter-item expanded "><div>2 Regularitzador i regressió polinomial</div></li><li class="chapter-item expanded "><div>3 Classificació amb Regressió logística</div></li><li class="chapter-item expanded "><div>4 Classificació amb SVMs</div></li><li class="chapter-item expanded "><div>5 Perceptró i Backpropagation</div></li><li class="chapter-item expanded "><div>6 Memorització de dades amb KNN</div></li><li class="chapter-item expanded "><div>7 Clustering de dades K-Means vs. EM</div></li><li class="chapter-item expanded affix "><li class="part-title">Operating Systems (SO)</li><li class="chapter-item expanded "><a href="../SO/1.html">1 Introduction</a></li><li class="chapter-item expanded "><a href="../SO/2.html">2 Processes, Threads, Containers</a></li><li class="chapter-item expanded "><a href="../SO/3.html">3 Concurrency</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Index</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Machine Learning (ApC)</li><li class="chapter-item expanded "><a href="../ApC/1.html" class="active">Regressió Linial i Descens del Gradient</a></li><li class="chapter-item expanded "><a href="../ApC/2.html">Regularitzador, regressió polinomial i recomanadors</a></li><li class="chapter-item expanded "><a href="../ApC/3.html">Regressió logística i multiclasse</a></li><li class="chapter-item expanded "><a href="../ApC/4.html">Classificació amb SVMs</a></li><li class="chapter-item expanded "><a href="../ApC/5.html">Xarxes Neuronals</a></li><li class="chapter-item expanded "><a href="../ApC/6.html">Clustering</a></li><li class="chapter-item expanded affix "><li class="part-title">Operating Systems (SO)</li><li class="chapter-item expanded "><a href="../SO/1.html">Introduction</a></li><li class="chapter-item expanded "><a href="../SO/2.html">Processes, Threads, Containers</a></li><li class="chapter-item expanded "><a href="../SO/3.html">Concurrency</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,6 +135,17 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="regressió-linial-i-descens-del-gradient"><a class="header" href="#regressió-linial-i-descens-del-gradient">Regressió Linial i Descens del Gradient</a></h1>
+<h3 id="1-defineix-el-descens-del-gradient-en-un-problema-de-regressió-lineal"><a class="header" href="#1-defineix-el-descens-del-gradient-en-un-problema-de-regressió-lineal">1. Defineix el Descens del Gradient en un problema de regressió lineal</a></h3>
+<p>https://hackernoon.com/gradient-descent-aynk-7cbe95a778da</p>
+<p>https://eli.thegreenplace.net/2016/understanding-gradient-descent</p>
+<p>https://medium.com/ai-society/hello-gradient-descent-ef74434bdfa5</p>
+<h3 id="2-explica-lefecte-del-coeficient-daprenentatge-en-regressió"><a class="header" href="#2-explica-lefecte-del-coeficient-daprenentatge-en-regressió">2. Explica l'efecte del coeficient d'aprenentatge en regressió</a></h3>
+<p>https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10</p>
+<p>http://thelaziestprogrammer.com/sharrington/math-of-machine-learning/gradient-descent-learning-rate-too-high</p>
+<h3 id="3-descriu-en-què-consisteix-la-regressió-multivariadapolinomial-i-en-què-es-diferencia-de-la-regressió-lineal-univariada"><a class="header" href="#3-descriu-en-què-consisteix-la-regressió-multivariadapolinomial-i-en-què-es-diferencia-de-la-regressió-lineal-univariada">3. Descriu en què consisteix la regressió multivariada/polinomial, i en què es diferencia de la regressió lineal univariada</a></h3>
+<p>http://networkianos.com/regresion-lineal-multiple/</p>
+<p>https://bairstown.wordpress.com/category/regresion-polinomial/page/1/</p>
+<p>http://statisticsbyjim.com/regression/curve-fitting-linear-nonlinear-regression/</p>
 
                     </main>
 
@@ -143,7 +154,7 @@
                             <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../SO/1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../ApC/2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -155,27 +166,13 @@
                     <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../SO/1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../ApC/2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

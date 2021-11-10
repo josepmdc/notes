@@ -3,16 +3,15 @@
 ---
 
 # Machine Learning (ApC)
-- [1 Regressió Linial i Descens del Gradient](./ApC/1.md)
-- [2 Regularitzador i regressió polinomial]()
-- [3 Classificació amb Regressió logística]()
-- [4 Classificació amb SVMs]()
-- [5 Perceptró i Backpropagation]()
-- [6 Memorització de dades amb KNN]()
-- [7 Clustering de dades K-Means vs. EM]()
+- [Regressió Linial i Descens del Gradient](./ApC/1.md)
+- [Regularitzador, regressió polinomial i recomanadors](./ApC/2.md)
+- [Regressió logística i multiclasse](./ApC/3.md)
+- [Classificació amb SVMs](./ApC/4.md)
+- [Xarxes Neuronals](./ApC/5.md)
+- [Clustering](./ApC/6.md)
 
 # Operating Systems (SO)
 
-- [1 Introduction](./SO/1.md)
-- [2 Processes, Threads, Containers](./SO/2.md)
-- [3 Concurrency](./SO/3.md)
+- [Introduction](./SO/1.md)
+- [Processes, Threads, Containers](./SO/2.md)
+- [Concurrency](./SO/3.md)

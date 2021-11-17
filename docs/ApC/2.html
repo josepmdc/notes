@@ -136,18 +136,50 @@
                     <main>
                         <h1 id="regularitzador-regressió-polinomial-i-recomanadors"><a class="header" href="#regularitzador-regressió-polinomial-i-recomanadors">Regularitzador, regressió polinomial i recomanadors</a></h1>
 <h3 id="1-defineix-què-és-loverfitting-i-lunderfitting-en-regressió"><a class="header" href="#1-defineix-què-és-loverfitting-i-lunderfitting-en-regressió">1. Defineix què és l'overfitting i l'underfitting en regressió.</a></h3>
-<p>https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-
-how-to-deal-with-it-6803a989c76</p>
-<p>https://towardsdatascience.com/overfitting-vs-underfitting-a-complete-example-
-d05dd7e19765</p>
+<p>L'overfitting és un fet que es dona quan una regressió s'adapta massa a les
+dades (memoritza les dades), i consequentment a l'hora de predir un nou valor
+que no ha vist mai no sap on col·locar-lo i genera una predicció erronea. 
+Es produeix overfitting quan tenim una variança molt alta.</p>
+<p>L'underfitting és el cas contrari, s'ha generalitzat massa la regressió
+i presta poca atenció a les dades de train, per tant a l'hora de predir 
+tampoc ho pot fer correctament ja que li falta informació més concreta.
+Es produeix underfitting quan tenim un bias molt alt.</p>
+<!-- https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76 -->
+<!-- https://towardsdatascience.com/overfitting-vs-underfitting-a-complete-example-d05dd7e19765 -->
 <h3 id="2-descriu-i-diferencia-entre-content-based-i-collaborative-recommenders"><a class="header" href="#2-descriu-i-diferencia-entre-content-based-i-collaborative-recommenders">2. Descriu i diferencia entre content-based i collaborative recommenders.</a></h3>
-<p>https://towardsdatascience.com/the-magic-behind-recommendation-systems-c3fc44927b3c</p>
-<p>https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada</p>
-<p>https://www.bluepiit.com/blog/classifying-recommender-systems/</p>
+<p><strong>Content-based filtering</strong>: Fa servir les característiques de cada item per
+recomenarlo a un usuari. Per exemple tenim una serie d'aplicacions, i cada
+aplicació té diverses propietats com ara la seva categoria. Quan un usuari
+instal·la una app d'una categoria, el recomanador li recomanaria altres
+aplicacions de la mateixa categoria. És a dir, es busca la similitud entre els
+items en base a les seves propietats, i fa la recomanació en base a aquesta
+similitud.</p>
+<p><strong>Collaborative filtering</strong>: Fa servir les preferencies d'altres usuaris per
+trobar similituds i així recomanar items que no hem consumit, però que altres
+usuaris similars si. Per exemple si nosaltres hem mirat les pel·lícules 1 i 2 
+i hi ha un altre usuari que ha vist la 1, la 2 i la 3, el recomanador ens
+recomanara la 3 perque es probable que ens interessi.</p>
+<p>Resumint, la diferencia entre els dos és que el content-based es fixa únicament
+en les característiques de cada item i et recomana items similars als que ja
+has consumit. Mentre que el collaborative-filltering també té en compte les
+interessos dels altres usuaris a l'hora de buscar items que t'interessin a tú.</p>
+<!-- https://towardsdatascience.com/the-magic-behind-recommendation-systems-c3fc44927b3c -->
+<!-- https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada -->
+<!-- https://www.bluepiit.com/blog/classifying-recommender-systems/ -->
 <h3 id="3-descriu-com-un-content-based-recommender-simplementa-com-un-regressor"><a class="header" href="#3-descriu-com-un-content-based-recommender-simplementa-com-un-regressor">3. Descriu com un content-based recommender s'implementa com un regressor.</a></h3>
-<p>http://www.folio3.com/blog/how-to-create-a-basic-content-based-recommendation-system/</p>
-<p>https://towardsdatascience.com/recommender-system-a1e4595fc0f0</p>
-<p>https://www.ritchieng.com/machine-learning-recommender-systems/</p>
+<p>L'objectiu de la regressió en aquest cas es predir la puntuació d'un usuari
+a un producte que encara no hagi valorat, i així, poder preveure si li pot
+interessar o no.</p>
+<p>Per poder fer la regressió hem d'identificar quina és la variable dependent
+a predir i quines són les variables independents. Per la variable dependent
+podem dir que és la puntuació que un usuari dóna a un producte, mentre que les 
+variables independents, serien les caracterisiques dels productes. 
+La regressió doncs, ens donarà una puntuació d'un producte en base a les
+caracterísiques dels altres productes, i així podrem saber si recomanar-lo
+a l'usuari o no.</p>
+<!-- http://www.folio3.com/blog/how-to-create-a-basic-content-based-recommendation-system/ -->
+<!-- https://towardsdatascience.com/recommender-system-a1e4595fc0f0 -->
+<!-- https://www.ritchieng.com/machine-learning-recommender-systems/ -->
 
                     </main>
 

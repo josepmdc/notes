@@ -134,18 +134,40 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="regressió-linial-i-descens-del-gradient"><a class="header" href="#regressió-linial-i-descens-del-gradient">Regressió Linial i Descens del Gradient</a></h1>
+                        <h1 id="apc-parcial-1"><a class="header" href="#apc-parcial-1"><em>ApC Parcial 1</em></a></h1>
+<h1 id="regressió-linial-i-descens-del-gradient"><a class="header" href="#regressió-linial-i-descens-del-gradient">Regressió Linial i Descens del Gradient</a></h1>
 <h3 id="1-defineix-el-descens-del-gradient-en-un-problema-de-regressió-lineal"><a class="header" href="#1-defineix-el-descens-del-gradient-en-un-problema-de-regressió-lineal">1. Defineix el Descens del Gradient en un problema de regressió lineal</a></h3>
-<p>https://hackernoon.com/gradient-descent-aynk-7cbe95a778da</p>
-<p>https://eli.thegreenplace.net/2016/understanding-gradient-descent</p>
-<p>https://medium.com/ai-society/hello-gradient-descent-ef74434bdfa5</p>
+<p>El Descens del gradient, és un dels algorismes més utilitzats en l'aprenentatge
+computacional. L'objectiu del descens del gradient és minimitzar una funció
+de cost a partir d'anar calculant el gradient, fins a arribar a un mínim (o un
+màxim).</p>
+<p>En un problema de regressió lineal, el nostre objectiu és definir un model que
+trobi la línia que minimitzi l'error (&quot;Root Mean Squared Error&quot;). 
+Per tal de trobar l'error mínim podem utilitzar el descens del gradient que fa
+just això.</p>
+<!-- https://hackernoon.com/gradient-descent-aynk-7cbe95a778da -->
+<!-- https://eli.thegreenplace.net/2016/understanding-gradient-descent -->
+<!-- https://medium.com/ai-society/hello-gradient-descent-ef74434bdfa5 -->
 <h3 id="2-explica-lefecte-del-coeficient-daprenentatge-en-regressió"><a class="header" href="#2-explica-lefecte-del-coeficient-daprenentatge-en-regressió">2. Explica l'efecte del coeficient d'aprenentatge en regressió</a></h3>
-<p>https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10</p>
-<p>http://thelaziestprogrammer.com/sharrington/math-of-machine-learning/gradient-descent-learning-rate-too-high</p>
+<p>El coeficient d'aprenentatge és un hyperparametre que controla la velocitat amb
+la que fem el descens del gradient. Si el coeficient és petit, el descens serà
+lent, si el coeficient és gran, el descens serà ràpid.</p>
+<p>És important trobar un balanç, ja que un valor massa petit pot comportar una
+convergencia massa lenta, però un valor massa gran, pot fer que ens passem de
+llarg i no arribem mai a convergir, o inclús que divergeixi.</p>
+<!-- https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10 -->
+<!-- http://thelaziestprogrammer.com/sharrington/math-of-machine-learning/gradient-descent-learning-rate-too-high -->
 <h3 id="3-descriu-en-què-consisteix-la-regressió-multivariadapolinomial-i-en-què-es-diferencia-de-la-regressió-lineal-univariada"><a class="header" href="#3-descriu-en-què-consisteix-la-regressió-multivariadapolinomial-i-en-què-es-diferencia-de-la-regressió-lineal-univariada">3. Descriu en què consisteix la regressió multivariada/polinomial, i en què es diferencia de la regressió lineal univariada</a></h3>
-<p>http://networkianos.com/regresion-lineal-multiple/</p>
-<p>https://bairstown.wordpress.com/category/regresion-polinomial/page/1/</p>
-<p>http://statisticsbyjim.com/regression/curve-fitting-linear-nonlinear-regression/</p>
+<p>L'objectiu de la regressió multivariada és modelar la relació linear entre un
+conjunt de variables independents i una variable dependent. És a dir ens permet
+predir el valor d'una variable en base dels valors d'un conjunt de variables 
+independents.</p>
+<p>La diferència entre la regressió multivariada i la univariada és que en el cas
+de la univariada una variable independent i una dependent, mentre que en la 
+multivariada tenim multiples variables independents i una dependent.</p>
+<!-- http://networkianos.com/regresion-lineal-multiple/ -->
+<!-- https://bairstown.wordpress.com/category/regresion-polinomial/page/1/ -->
+<!-- http://statisticsbyjim.com/regression/curve-fitting-linear-nonlinear-regression/ -->
 
                     </main>
 

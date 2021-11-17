@@ -136,58 +136,163 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="index"><a class="header" href="#index">Index</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="regressió-linial-i-descens-del-gradient"><a class="header" href="#regressió-linial-i-descens-del-gradient">Regressió Linial i Descens del Gradient</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="apc-parcial-1"><a class="header" href="#apc-parcial-1"><em>ApC Parcial 1</em></a></h1>
+<h1 id="regressió-linial-i-descens-del-gradient"><a class="header" href="#regressió-linial-i-descens-del-gradient">Regressió Linial i Descens del Gradient</a></h1>
 <h3 id="1-defineix-el-descens-del-gradient-en-un-problema-de-regressió-lineal"><a class="header" href="#1-defineix-el-descens-del-gradient-en-un-problema-de-regressió-lineal">1. Defineix el Descens del Gradient en un problema de regressió lineal</a></h3>
-<p>https://hackernoon.com/gradient-descent-aynk-7cbe95a778da</p>
-<p>https://eli.thegreenplace.net/2016/understanding-gradient-descent</p>
-<p>https://medium.com/ai-society/hello-gradient-descent-ef74434bdfa5</p>
+<p>El Descens del gradient, és un dels algorismes més utilitzats en l'aprenentatge
+computacional. L'objectiu del descens del gradient és minimitzar una funció
+de cost a partir d'anar calculant el gradient, fins a arribar a un mínim (o un
+màxim).</p>
+<p>En un problema de regressió lineal, el nostre objectiu és definir un model que
+trobi la línia que minimitzi l'error (&quot;Root Mean Squared Error&quot;). 
+Per tal de trobar l'error mínim podem utilitzar el descens del gradient que fa
+just això.</p>
+<!-- https://hackernoon.com/gradient-descent-aynk-7cbe95a778da -->
+<!-- https://eli.thegreenplace.net/2016/understanding-gradient-descent -->
+<!-- https://medium.com/ai-society/hello-gradient-descent-ef74434bdfa5 -->
 <h3 id="2-explica-lefecte-del-coeficient-daprenentatge-en-regressió"><a class="header" href="#2-explica-lefecte-del-coeficient-daprenentatge-en-regressió">2. Explica l'efecte del coeficient d'aprenentatge en regressió</a></h3>
-<p>https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10</p>
-<p>http://thelaziestprogrammer.com/sharrington/math-of-machine-learning/gradient-descent-learning-rate-too-high</p>
+<p>El coeficient d'aprenentatge és un hyperparametre que controla la velocitat amb
+la que fem el descens del gradient. Si el coeficient és petit, el descens serà
+lent, si el coeficient és gran, el descens serà ràpid.</p>
+<p>És important trobar un balanç, ja que un valor massa petit pot comportar una
+convergencia massa lenta, però un valor massa gran, pot fer que ens passem de
+llarg i no arribem mai a convergir, o inclús que divergeixi.</p>
+<!-- https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10 -->
+<!-- http://thelaziestprogrammer.com/sharrington/math-of-machine-learning/gradient-descent-learning-rate-too-high -->
 <h3 id="3-descriu-en-què-consisteix-la-regressió-multivariadapolinomial-i-en-què-es-diferencia-de-la-regressió-lineal-univariada"><a class="header" href="#3-descriu-en-què-consisteix-la-regressió-multivariadapolinomial-i-en-què-es-diferencia-de-la-regressió-lineal-univariada">3. Descriu en què consisteix la regressió multivariada/polinomial, i en què es diferencia de la regressió lineal univariada</a></h3>
-<p>http://networkianos.com/regresion-lineal-multiple/</p>
-<p>https://bairstown.wordpress.com/category/regresion-polinomial/page/1/</p>
-<p>http://statisticsbyjim.com/regression/curve-fitting-linear-nonlinear-regression/</p>
+<p>L'objectiu de la regressió multivariada és modelar la relació linear entre un
+conjunt de variables independents i una variable dependent. És a dir ens permet
+predir el valor d'una variable en base dels valors d'un conjunt de variables 
+independents.</p>
+<p>La diferència entre la regressió multivariada i la univariada és que en el cas
+de la univariada una variable independent i una dependent, mentre que en la 
+multivariada tenim multiples variables independents i una dependent.</p>
+<!-- http://networkianos.com/regresion-lineal-multiple/ -->
+<!-- https://bairstown.wordpress.com/category/regresion-polinomial/page/1/ -->
+<!-- http://statisticsbyjim.com/regression/curve-fitting-linear-nonlinear-regression/ -->
 <div style="break-before: page; page-break-before: always;"></div><h1 id="regularitzador-regressió-polinomial-i-recomanadors"><a class="header" href="#regularitzador-regressió-polinomial-i-recomanadors">Regularitzador, regressió polinomial i recomanadors</a></h1>
 <h3 id="1-defineix-què-és-loverfitting-i-lunderfitting-en-regressió"><a class="header" href="#1-defineix-què-és-loverfitting-i-lunderfitting-en-regressió">1. Defineix què és l'overfitting i l'underfitting en regressió.</a></h3>
-<p>https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-
-how-to-deal-with-it-6803a989c76</p>
-<p>https://towardsdatascience.com/overfitting-vs-underfitting-a-complete-example-
-d05dd7e19765</p>
+<p>L'overfitting és un fet que es dona quan una regressió s'adapta massa a les
+dades (memoritza les dades), i consequentment a l'hora de predir un nou valor
+que no ha vist mai no sap on col·locar-lo i genera una predicció erronea. 
+Es produeix overfitting quan tenim una variança molt alta.</p>
+<p>L'underfitting és el cas contrari, s'ha generalitzat massa la regressió
+i presta poca atenció a les dades de train, per tant a l'hora de predir 
+tampoc ho pot fer correctament ja que li falta informació més concreta.
+Es produeix underfitting quan tenim un bias molt alt.</p>
+<!-- https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76 -->
+<!-- https://towardsdatascience.com/overfitting-vs-underfitting-a-complete-example-d05dd7e19765 -->
 <h3 id="2-descriu-i-diferencia-entre-content-based-i-collaborative-recommenders"><a class="header" href="#2-descriu-i-diferencia-entre-content-based-i-collaborative-recommenders">2. Descriu i diferencia entre content-based i collaborative recommenders.</a></h3>
-<p>https://towardsdatascience.com/the-magic-behind-recommendation-systems-c3fc44927b3c</p>
-<p>https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada</p>
-<p>https://www.bluepiit.com/blog/classifying-recommender-systems/</p>
+<p><strong>Content-based filtering</strong>: Fa servir les característiques de cada item per
+recomenarlo a un usuari. Per exemple tenim una serie d'aplicacions, i cada
+aplicació té diverses propietats com ara la seva categoria. Quan un usuari
+instal·la una app d'una categoria, el recomanador li recomanaria altres
+aplicacions de la mateixa categoria. És a dir, es busca la similitud entre els
+items en base a les seves propietats, i fa la recomanació en base a aquesta
+similitud.</p>
+<p><strong>Collaborative filtering</strong>: Fa servir les preferencies d'altres usuaris per
+trobar similituds i així recomanar items que no hem consumit, però que altres
+usuaris similars si. Per exemple si nosaltres hem mirat les pel·lícules 1 i 2 
+i hi ha un altre usuari que ha vist la 1, la 2 i la 3, el recomanador ens
+recomanara la 3 perque es probable que ens interessi.</p>
+<p>Resumint, la diferencia entre els dos és que el content-based es fixa únicament
+en les característiques de cada item i et recomana items similars als que ja
+has consumit. Mentre que el collaborative-filltering també té en compte les
+interessos dels altres usuaris a l'hora de buscar items que t'interessin a tú.</p>
+<!-- https://towardsdatascience.com/the-magic-behind-recommendation-systems-c3fc44927b3c -->
+<!-- https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada -->
+<!-- https://www.bluepiit.com/blog/classifying-recommender-systems/ -->
 <h3 id="3-descriu-com-un-content-based-recommender-simplementa-com-un-regressor"><a class="header" href="#3-descriu-com-un-content-based-recommender-simplementa-com-un-regressor">3. Descriu com un content-based recommender s'implementa com un regressor.</a></h3>
-<p>http://www.folio3.com/blog/how-to-create-a-basic-content-based-recommendation-system/</p>
-<p>https://towardsdatascience.com/recommender-system-a1e4595fc0f0</p>
-<p>https://www.ritchieng.com/machine-learning-recommender-systems/</p>
+<p>L'objectiu de la regressió en aquest cas es predir la puntuació d'un usuari
+a un producte que encara no hagi valorat, i així, poder preveure si li pot
+interessar o no.</p>
+<p>Per poder fer la regressió hem d'identificar quina és la variable dependent
+a predir i quines són les variables independents. Per la variable dependent
+podem dir que és la puntuació que un usuari dóna a un producte, mentre que les 
+variables independents, serien les caracterisiques dels productes. 
+La regressió doncs, ens donarà una puntuació d'un producte en base a les
+caracterísiques dels altres productes, i així podrem saber si recomanar-lo
+a l'usuari o no.</p>
+<!-- http://www.folio3.com/blog/how-to-create-a-basic-content-based-recommendation-system/ -->
+<!-- https://towardsdatascience.com/recommender-system-a1e4595fc0f0 -->
+<!-- https://www.ritchieng.com/machine-learning-recommender-systems/ -->
 <div style="break-before: page; page-break-before: always;"></div><h1 id="regressió-logística-i-multiclasse"><a class="header" href="#regressió-logística-i-multiclasse">Regressió logística i multiclasse</a></h1>
 <h3 id="1-descriu-en-què-consisteix-la-regressió-logística"><a class="header" href="#1-descriu-en-què-consisteix-la-regressió-logística">1. Descriu en què consisteix la regressió logística</a></h3>
-<p>https://machinelearningmastery.com/logistic-regression-for-machine-learning/</p>
-<p>https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc</p>
+<p>La regressió logistica consisteix en definir els pesos d'una funció, anomenada 
+signoidea, que té forma d'S. A partir d'aquesta funció podrem classificar un
+item del dataset entre dos categories. Aquest ultim punt és important
+a desteacar, ja la regressió logistica a diferència de la regressió lineal, és
+un classificador binari.</p>
+<p>Per trobar la linia que millor classifiqui les dades fem servir l'estimació de 
+&quot;Maximum Likelihood&quot;, la qual maximitza una funció de &quot;likelihood&quot; utilitzant 
+el Descens del Gradient.</p>
+<!-- https://machinelearningmastery.com/logistic-regression-for-machine-learning/ -->
+<!-- https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc -->
 <h3 id="2-defineix-el-descens-del-gradient-en-un-problema-de-regressió-logística"><a class="header" href="#2-defineix-el-descens-del-gradient-en-un-problema-de-regressió-logística">2. Defineix el Descens del Gradient en un problema de regressió logística.</a></h3>
-<p>https://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression/</p>
-<p>http://ucanalytics.com/blogs/gradient-descent-logistic-regression-simplified-step-step-visual-
-guide/</p>
+<p>En un problema de regressió logistica el Descens del Gradient ens serveix per
+maximitzar la funció de la &quot;Maximum Likelihood&quot;, la qual estima els coeficients
+del nostre model.</p>
+<!-- https://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression/ -->
+<!-- http://ucanalytics.com/blogs/gradient-descent-logistic-regression-simplified-step-step-visual-guide/ -->
 <h3 id="3-defineix-i-diferencia-entre-bagging-i-boosting-en-el-context-dun-regressor-multi-classe"><a class="header" href="#3-defineix-i-diferencia-entre-bagging-i-boosting-en-el-context-dun-regressor-multi-classe">3. Defineix i diferencia entre Bagging i Boosting en el context d’un regressor multi-classe.</a></h3>
-<p>https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-
-c9214a10a205</p>
-<p>https://becominghuman.ai/ensemble-learning-bagging-and-boosting-d20f38be9b1e</p>
-<p>https://www.iartificial.net/ensembles-voting-bagging-boosting-stacking/</p>
+<p>Bagging consisteix en crear una serie de bosses (&quot;bags&quot; en anglès, d'aquí
+&quot;bagging&quot;), i agafem un conjunt d'items aleatoriament del conjunt d'entrenament 
+i els posem a dins d'una bossa, i fem el mateix per totes les bosses. Després
+apliquem la regressió a cada una de les bosses i el resultat final serà la
+mitjana de totes les bosses.</p>
+<p>El Boosting és una variació del Bagging. Els primers pasos són els mateixos,
+creem una serie de bosses, i hi afegim dades del conjunt de train de forma 
+aleatoria. Ara bé, en comptes de directement aplicar la regressió a totes les
+bosses i fer la mitjana, només apliquem la regressió a al primera bossa
+i comprevem l'error. Aquest error el farem servir a l'hora de fer la regressió
+de la següent bossa per tal de compensar-lo, i així successivament fins a 
+haver-ho fet amb totes les bosses.</p>
+<!-- https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205 -->
+<!-- https://becominghuman.ai/ensemble-learning-bagging-and-boosting-d20f38be9b1e -->
+<!-- https://www.iartificial.net/ensembles-voting-bagging-boosting-stacking/ -->
 <div style="break-before: page; page-break-before: always;"></div><h1 id="classificació-amb-svms"><a class="header" href="#classificació-amb-svms">Classificació amb SVMs</a></h1>
 <h3 id="1-defineix-la-màquina-de-vectors-de-suport-svm-i-descriu-les-seves-propietats"><a class="header" href="#1-defineix-la-màquina-de-vectors-de-suport-svm-i-descriu-les-seves-propietats">1. Defineix la Màquina de Vectors de Suport (SVM), i descriu les seves propietats.</a></h3>
-<p>https://www.cienciadedatos.net/documentos/34_maquinas_de_vector_soporte_support_vector_machines</p>
-<p>https://towardsdatascience.com/support-vector-machines-a-brief-overview-37e018ae310f</p>
-<p>https://monkeylearn.com/blog/introduction-to-support-vector-machines-svm/</p>
+<p>Una SVM ens permet classificar les dades d'una dataset de forma lineal. El seu
+objectiu és definir una linia que separi les classes i que maximitzi el marge,
+és a dir la distància entre el punt més proper de cada classe i la linia. En
+casos de més de 2 dimensions en comptes d'una linia, el que divideix les
+classes és un pla o un hyperpla si tenim més de 3 dimensions.</p>
+<!-- https://www.cienciadedatos.net/documentos/34_maquinas_de_vector_soporte_support_vector_machines -->
+<!-- https://towardsdatascience.com/support-vector-machines-a-brief-overview-37e018ae310f -->
+<!-- https://monkeylearn.com/blog/introduction-to-support-vector-machines-svm/ -->
 <h3 id="2-descriu-com-les-variables-slack-sutilitzen-en-les-svm-per-permetre-errors-de-classificació-soft-margin-svm"><a class="header" href="#2-descriu-com-les-variables-slack-sutilitzen-en-les-svm-per-permetre-errors-de-classificació-soft-margin-svm">2. Descriu com les variables slack s'utilitzen en les SVM per permetre errors de classificació (soft-margin SVM)</a></h3>
-<p>https://quantmacro.wordpress.com/2016/06/21/support-vector-machines-without-tears-
-part-2/</p>
-<p>https://blog.statsbot.co/support-vector-machines-tutorial-c1618e635e93</p>
+<p>Els Suport Vector Classifiers tenen un problema amb els outliers, ja que ens
+forçen a crear la frontera en un lloc on esta molt lluny de la resta d'items de
+la seva classe pero molt aprop de les d'una altre classe, o a vegades
+directament fan que no poguem separar linealment el dataset. Això provoca que quan
+intentem predir un nou item, el classifiquem malament. Les variables
+d'slack, permeten solucionar aquest problema, ja que flexibilitzen el marge
+i permeten que aquests outliers es quedim dins del marge. És el que anomanem
+soft-margin.</p>
+<p>La variables slack pot prendre tres tipus de valor diferents: 0 si el punt no
+viola el marge, entre 0 i 1 quan el punt viola el marge però esta correctament
+classificat i major que 1 si la variable esta en el costat incorrecte de
+l'hyperpla.</p>
+<!-- https://quantmacro.wordpress.com/2016/06/21/support-vector-machines-without-tears-part-2/ -->
+<!-- https://blog.statsbot.co/support-vector-machines-tutorial-c1618e635e93 -->
 <h3 id="3-descriu-lús-avantatges-i-inconvenients-dels-kernels-en-les-svm"><a class="header" href="#3-descriu-lús-avantatges-i-inconvenients-dels-kernels-en-les-svm">3. Descriu l'ús, avantatges i inconvenients dels kernels en les SVM.</a></h3>
-<p>http://www.win-vector.com/blog/2011/10/kernel-methods-and-support-vector-machines-de-mystified/</p>
-<p>https://towardsdatascience.com/understanding-the-kernel-trick-e0bc6112ef78</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="xarxes-neuronals"><a class="header" href="#xarxes-neuronals">Xarxes Neuronals</a></h1>
+<p>Les SVM ens permeten classificar items d'un dataset a partir d'una linia que
+separa les classes. El problema és que no tots els datasets poden ser separats
+linealment. Els kernels ens permeten passar les dades a una dimensió superior
+on les dades agafem una altre forma i es possible que si que es puguin separar 
+les dades.</p>
+<ul>
+<li>
+<p>Avantatges:</p>
+</li>
+<li>
+<p>Inconvenients:</p>
+</li>
+</ul>
+<!-- http://www.win-vector.com/blog/2011/10/kernel-methods-and-support-vector-machines-de-mystified/ -->
+<!-- https://towardsdatascience.com/understanding-the-kernel-trick-e0bc6112ef78 -->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="apc-parcial-2"><a class="header" href="#apc-parcial-2"><em>ApC Parcial 2</em></a></h1>
+<h1 id="xarxes-neuronals"><a class="header" href="#xarxes-neuronals">Xarxes Neuronals</a></h1>
 <h3 id="1-descriu-el-perceptró-de-frank-rosenblatt-i-com-una-multi-layer-perceptron-pot-representar-funcions-no-lineals-com-la-xor"><a class="header" href="#1-descriu-el-perceptró-de-frank-rosenblatt-i-com-una-multi-layer-perceptron-pot-representar-funcions-no-lineals-com-la-xor">1. Descriu el perceptró de Frank Rosenblatt, i com una Multi-Layer Perceptron pot representar funcions no lineals com la XOR.</a></h3>
 <p>https://becominghuman.ai/from-perceptron-to-deep-neural-nets-504b8ff616e</p>
 <p>https://medium.com/@lucaspereira0612/solving-xor-with-a-single-perceptron-34539f395182</p>

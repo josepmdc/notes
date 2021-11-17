@@ -136,17 +136,38 @@
                     <main>
                         <h1 id="regressió-logística-i-multiclasse"><a class="header" href="#regressió-logística-i-multiclasse">Regressió logística i multiclasse</a></h1>
 <h3 id="1-descriu-en-què-consisteix-la-regressió-logística"><a class="header" href="#1-descriu-en-què-consisteix-la-regressió-logística">1. Descriu en què consisteix la regressió logística</a></h3>
-<p>https://machinelearningmastery.com/logistic-regression-for-machine-learning/</p>
-<p>https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc</p>
+<p>La regressió logistica consisteix en definir els pesos d'una funció, anomenada 
+signoidea, que té forma d'S. A partir d'aquesta funció podrem classificar un
+item del dataset entre dos categories. Aquest ultim punt és important
+a desteacar, ja la regressió logistica a diferència de la regressió lineal, és
+un classificador binari.</p>
+<p>Per trobar la linia que millor classifiqui les dades fem servir l'estimació de 
+&quot;Maximum Likelihood&quot;, la qual maximitza una funció de &quot;likelihood&quot; utilitzant 
+el Descens del Gradient.</p>
+<!-- https://machinelearningmastery.com/logistic-regression-for-machine-learning/ -->
+<!-- https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc -->
 <h3 id="2-defineix-el-descens-del-gradient-en-un-problema-de-regressió-logística"><a class="header" href="#2-defineix-el-descens-del-gradient-en-un-problema-de-regressió-logística">2. Defineix el Descens del Gradient en un problema de regressió logística.</a></h3>
-<p>https://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression/</p>
-<p>http://ucanalytics.com/blogs/gradient-descent-logistic-regression-simplified-step-step-visual-
-guide/</p>
+<p>En un problema de regressió logistica el Descens del Gradient ens serveix per
+maximitzar la funció de la &quot;Maximum Likelihood&quot;, la qual estima els coeficients
+del nostre model.</p>
+<!-- https://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression/ -->
+<!-- http://ucanalytics.com/blogs/gradient-descent-logistic-regression-simplified-step-step-visual-guide/ -->
 <h3 id="3-defineix-i-diferencia-entre-bagging-i-boosting-en-el-context-dun-regressor-multi-classe"><a class="header" href="#3-defineix-i-diferencia-entre-bagging-i-boosting-en-el-context-dun-regressor-multi-classe">3. Defineix i diferencia entre Bagging i Boosting en el context d’un regressor multi-classe.</a></h3>
-<p>https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-
-c9214a10a205</p>
-<p>https://becominghuman.ai/ensemble-learning-bagging-and-boosting-d20f38be9b1e</p>
-<p>https://www.iartificial.net/ensembles-voting-bagging-boosting-stacking/</p>
+<p>Bagging consisteix en crear una serie de bosses (&quot;bags&quot; en anglès, d'aquí
+&quot;bagging&quot;), i agafem un conjunt d'items aleatoriament del conjunt d'entrenament 
+i els posem a dins d'una bossa, i fem el mateix per totes les bosses. Després
+apliquem la regressió a cada una de les bosses i el resultat final serà la
+mitjana de totes les bosses.</p>
+<p>El Boosting és una variació del Bagging. Els primers pasos són els mateixos,
+creem una serie de bosses, i hi afegim dades del conjunt de train de forma 
+aleatoria. Ara bé, en comptes de directement aplicar la regressió a totes les
+bosses i fer la mitjana, només apliquem la regressió a al primera bossa
+i comprevem l'error. Aquest error el farem servir a l'hora de fer la regressió
+de la següent bossa per tal de compensar-lo, i així successivament fins a 
+haver-ho fet amb totes les bosses.</p>
+<!-- https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205 -->
+<!-- https://becominghuman.ai/ensemble-learning-bagging-and-boosting-d20f38be9b1e -->
+<!-- https://www.iartificial.net/ensembles-voting-bagging-boosting-stacking/ -->
 
                     </main>
 
